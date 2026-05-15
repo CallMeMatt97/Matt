@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "etherscan-api-key",
+      "description": "Etherscan API key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "etherscan": {
+      "type": "http",
+      "url": "https://mcp.etherscan.io/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:etherscan-api-key}"
+      }
+    }
+  }
+}
